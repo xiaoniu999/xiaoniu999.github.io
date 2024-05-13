@@ -20,31 +20,34 @@
     var CONFIG = {"hostname":"xiaoniu999.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CSJ的个人博客">
-<meta property="og:url" content="https://xiaoniu999.github.io/index.html">
+  <meta name="description" content="1. 关键字public protected private称为访问修饰符，类成员包括成员变量和成员函数。类外部的定义是：不在类定义中的部分。 1.1 public 可以被类内外部访问； 继承后，在派生类中也是public；  1.2 protected 不能被类外部访问，比如实例化的对象不能访问protected中的成员； 可以在派生类中访问，在派生类中仍然是public；  1.3 priva">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++学习笔记——类（1）">
+<meta property="og:url" content="https://xiaoniu999.github.io/%E8%AF%AD%E8%A8%80%E7%B1%BB/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E7%B1%BB(1)/index.html">
 <meta property="og:site_name" content="CSJ的个人博客">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="1. 关键字public protected private称为访问修饰符，类成员包括成员变量和成员函数。类外部的定义是：不在类定义中的部分。 1.1 public 可以被类内外部访问； 继承后，在派生类中也是public；  1.2 protected 不能被类外部访问，比如实例化的对象不能访问protected中的成员； 可以在派生类中访问，在派生类中仍然是public；  1.3 priva">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-13T13:54:56.903Z">
+<meta property="article:modified_time" content="2024-05-13T13:57:37.985Z">
 <meta property="article:author" content="CSJ">
-<meta property="article:tag" content="C&#x2F;RUST">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="类">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xiaoniu999.github.io/">
+<link rel="canonical" href="https://xiaoniu999.github.io/%E8%AF%AD%E8%A8%80%E7%B1%BB/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E7%B1%BB(1)/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>CSJ的个人博客</title>
+  <title>C++学习笔记——类（1） | CSJ的个人博客</title>
   
 
 
@@ -157,121 +160,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xiaoniu999.github.io/%E8%AF%AD%E8%A8%80%E7%B1%BB/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/giphy.gif">
-      <meta itemprop="name" content="CSJ">
-      <meta itemprop="description" content="个人博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CSJ的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E8%AF%AD%E8%A8%80%E7%B1%BB/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" class="post-title-link" itemprop="url">C++基础知识点——持续更新</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-13 22:00:58 / 修改时间：22:02:51" itemprop="dateCreated datePublished" datetime="2024-05-13T22:00:58+08:00">2024-05-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%AD%E8%A8%80%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">语言类</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-for循环"><a href="#1-for循环" class="headerlink" title="1. for循环"></a>1. for循环</h2><h3 id="1-1-for循环新语法"><a href="#1-1-for循环新语法" class="headerlink" title="1.1 for循环新语法"></a>1.1 for循环新语法</h3><p>C++11 标准中引入的一种新的 for 循环语法，称为基于范围的 for 循环（range-based for loop）。这种语法简洁且表达能力强，非常适合遍历容器，如数组、向量（vector）、列表（list）等。如果数组是固定大小的，并且编译时已知，你可以使用 std::array 或 std::vector 来避免手动指定数组的大小：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;array&gt;</span></span></span><br><span class="line"></span><br><span class="line">std::array&lt;<span class="type">int</span>, 10&gt; myArray; <span class="comment">// 一个包含10个int的数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> value : myArray) &#123;</span><br><span class="line">    <span class="comment">// 使用数组元素: value</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-for循环中的i和i"><a href="#1-2-for循环中的i和i" class="headerlink" title="1.2 for循环中的i和i"></a>1.2 for循环中的i和i</h3><p>优先使用++i，因为1）运行时减少不必要的临时变量创建；2）清晰地表明增量操作是循环的主要目的；</p>
-<h2 id="2-C-特性"><a href="#2-C-特性" class="headerlink" title="2. C++特性"></a>2. C++特性</h2><p>在面向对象编程（OOP）中，封装、多态和继承是三个核心概念，它们共同构成了OOP的基础。下面是对这三个概念的详细解释：</p>
-<h3 id="2-1-封装（Encapsulation）"><a href="#2-1-封装（Encapsulation）" class="headerlink" title="2.1 封装（Encapsulation）"></a>2.1 封装（Encapsulation）</h3><p>封装是将数据（成员变量）和行为（成员函数）结合在一起的机制，同时限制对内部实现的直接访问。在C++中，封装通过访问修饰符来实现，主要有以下几种：</p>
-<ul>
-<li>private：私有成员，只能在类的内部访问，不能被类的外部访问。</li>
-<li>protected：受保护成员，可以在类的内部以及派生类中访问。</li>
-<li>public：公共成员，可以被任何访问该类的代码访问。</li>
-</ul>
-<p>封装的好处包括：</p>
-<ul>
-<li>数据隐藏：隐藏对象的内部状态和复杂性，只暴露必要的操作接口。</li>
-<li>实现细节隐藏：允许修改对象的内部实现，而不会影响使用该对象的代码。</li>
-<li>接口清晰：提供清晰的接口定义，使得使用类更加容易。</li>
-</ul>
-<h3 id="2-2-多态（Polymorphism）"><a href="#2-2-多态（Polymorphism）" class="headerlink" title="2.2 多态（Polymorphism）"></a>2.2 多态（Polymorphism）</h3><p>多态是指允许不同类的对象对同一消息做出响应的能力。换句话说，它允许一个接口表示多种形式。在C++中，多态主要通过虚函数来实现。</p>
-<ul>
-<li>运行时多态（动态多态）：这是最常见的多态形式，它依赖于虚函数。当基类的指针或引用指向派生类对象时，调用基类中的虚函数，将执行派生类中重写的版本。</li>
-<li>编译时多态（静态多态）：通过函数重载和运算符重载实现，这是在编译时确定的。</li>
-</ul>
-<p>多态的好处包括：</p>
-<ul>
-<li>接口统一：允许通过统一的接口来处理不同类型的对象。</li>
-<li>扩展性：可以扩展现有的代码，而不需要修改现有的类。</li>
-<li>解耦：将“做什么”（算法和逻辑）与“怎么做”（实现细节）分离。</li>
-</ul>
-<h3 id="2-3-继承（Inheritance）"><a href="#2-3-继承（Inheritance）" class="headerlink" title="2.3 继承（Inheritance）"></a>2.3 继承（Inheritance）</h3><p>继承是一种创建新类的方式，新类继承现有类的属性和方法，并可以添加新的属性和方法或覆盖现有方法。继承是实现代码复用和建立类之间关系的一种方式。</p>
-<p>在C++中，继承的语法如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DerivedClassName</span> : access-specifier BaseClassName &#123;</span><br><span class="line">    <span class="comment">// 派生类的内容</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>public inheritance：派生类公有地继承基类，可以访问基类的所有公有成员和保护成员。</li>
-<li>protected inheritance：派生类受保护地继承基类，基类的公有成员和保护成员在派生类中都成为保护成员。</li>
-<li>private inheritance：派生类私有地继承基类，基类的公有成员和保护成员在派生类中都成为私有成员。</li>
-</ul>
-<p>继承的好处包括：</p>
-<ul>
-<li>代码复用：减少代码重复，提高开发效率。</li>
-<li>层次结构：建立类之间的层次关系，使得类的结构更加清晰。</li>
-<li>扩展性：允许通过派生类来扩展或修改基类的行为。</li>
-</ul>
-<p>然而，继承也有其缺点，例如可能会导致类的层次结构过于复杂，以及可能导致基类和派生类之间的耦合度增加。因此，在设计类层次结构时需要谨慎使用继承。</p>
-<p>这三个概念是C中面向对象编程的基础，它们使得C成为一个功能强大且灵活的编程语言，适用于各种复杂的软件开发任务。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -287,10 +179,9 @@
       <meta itemprop="name" content="CSJ的个人博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E8%AF%AD%E8%A8%80%E7%B1%BB/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E7%B1%BB(1)/" class="post-title-link" itemprop="url">C++学习笔记——类（1）</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          C++学习笔记——类（1）
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -323,7 +214,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-关键字public-protected-private"><a href="#1-关键字public-protected-private" class="headerlink" title="1. 关键字public protected private"></a>1. 关键字public protected private</h2><p>称为访问修饰符，类成员包括成员变量和成员函数。类外部的定义是：不在类定义中的部分。</p>
+        <h2 id="1-关键字public-protected-private"><a href="#1-关键字public-protected-private" class="headerlink" title="1. 关键字public protected private"></a>1. 关键字public protected private</h2><p>称为访问修饰符，类成员包括成员变量和成员函数。类外部的定义是：不在类定义中的部分。</p>
 <h3 id="1-1-public"><a href="#1-1-public" class="headerlink" title="1.1 public"></a>1.1 public</h3><ol>
 <li>可以被类内外部访问；</li>
 <li>继承后，在派生类中也是public；</li>
@@ -403,123 +294,37 @@
 <p>举例：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">show</span><span class="params">()</span> <span class="type">const</span> </span>&#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Base class show&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">Base</span>() &#123;&#125;  <span class="comment">// 虚析构函数</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span> : <span class="keyword">public</span> Base &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    std::string extraData;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Derived</span>(<span class="type">const</span> std::string&amp; data) : <span class="built_in">extraData</span>(data) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span> <span class="type">const</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Derived class show, extra data: &quot;</span> &lt;&lt; extraData &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">Derived <span class="title">d</span><span class="params">(<span class="string">&quot;Example data&quot;</span>)</span></span>;</span><br><span class="line">    Base* basePtr = &amp;d;  <span class="comment">// 基类指针管理派生类对象</span></span><br><span class="line"></span><br><span class="line">    basePtr-&gt;<span class="built_in">show</span>();  <span class="comment">// 调用实际类型的 show 方法，输出: Derived class show, extra data: Example data</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/%E7%B1%BB/" rel="tag"># 类</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xiaoniu999.github.io/%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/giphy.gif">
-      <meta itemprop="name" content="CSJ">
-      <meta itemprop="description" content="个人博客">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CSJ的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">使用github部署博客步骤</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-23 22:19:28" itemprop="dateCreated datePublished" datetime="2024-04-23T22:19:28+08:00">2024-04-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 19:54:40" itemprop="dateModified" datetime="2024-04-25T19:54:40+08:00">2024-04-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">教程类</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>本文讲解如何使用hexo和GitHub搭建个人博客。</p>
-<h2 id="主要架构"><a href="#主要架构" class="headerlink" title="主要架构"></a>主要架构</h2><ol>
-<li>在GitHub个人主页创建仓库，仓库名称为username.github.io，这个仓库是博客显示内容的仓库;</li>
-<li>在本地电脑创建博客文件夹blog，该文件夹配置后能够使用hexo deploy命令自动部署博客;</li>
-<li>创建一个管理博客的远程仓库，将blog文件夹提交到该仓库，实现使用git管理博客内容.</li>
-</ol>
-<h2 id="创建博客仓库"><a href="#创建博客仓库" class="headerlink" title="创建博客仓库"></a>创建博客仓库</h2><ol>
-<li>与普通仓库创建方式相同</li>
-</ol>
-<h2 id="创建本地博客目录"><a href="#创建本地博客目录" class="headerlink" title="创建本地博客目录"></a>创建本地博客目录</h2><ol>
-<li>新建文件夹blog;</li>
-<li>进入blog文件夹，在命令行中使用命令hexo init初始化文件夹；</li>
-<li>继续运行命令npm install更新包；</li>
-<li>运行命令npm install hexo-deployer-git –save，安装git部署插件；</li>
-<li>打开_config.yml文件，修改内容，username为用户名，具体如下：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建管理博客的仓库"><a href="#创建管理博客的仓库" class="headerlink" title="创建管理博客的仓库"></a>创建管理博客的仓库</h2><ol>
-<li>创建远程仓库blog_manage;</li>
-<li>在文件夹blog下，依次运行以下命令：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m “first commit”</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/username/blog_manage.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-
-<h2 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h2><ol>
-<li>hexo generate:每次更新完需要重新生成网页内容；</li>
-<li>hexo server:本地查看网页效果；</li>
-<li>hexo deploy:部署到github网站；</li>
-</ol>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="prev" title="使用github部署博客步骤">
+      <i class="fa fa-chevron-left"></i> 使用github部署博客步骤
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E8%AF%AD%E8%A8%80%E7%B1%BB/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" rel="next" title="C++基础知识点——持续更新">
+      C++基础知识点——持续更新 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -572,6 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%85%B3%E9%94%AE%E5%AD%97public-protected-private"><span class="nav-number">1.</span> <span class="nav-text">1. 关键字public protected private</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-public"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 public</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-protected"><span class="nav-number">2.</span> <span class="nav-text">1.2 protected</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-private"><span class="nav-number">3.</span> <span class="nav-text">1.3 private</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">2. 继承方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">3. 构造函数和析构函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">5.1.</span> <span class="nav-text">3.1 自定义构造函数的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">5.2.</span> <span class="nav-text">3.2 自定义析构函数的情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%99%9A%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">4. 虚函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">4.1 虚函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">6.2.</span> <span class="nav-text">4.2 虚函数的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E9%87%8D%E5%86%99%E8%99%9A%E5%87%BD%E6%95%B0"><span class="nav-number">6.3.</span> <span class="nav-text">4.3 重写虚函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E8%99%9A%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">6.4.</span> <span class="nav-text">4.4 虚析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">6.5.</span> <span class="nav-text">4.5 纯虚函数和抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">6.6.</span> <span class="nav-text">4.6 虚函数的注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-Q-A"><span class="nav-number">6.7.</span> <span class="nav-text">4.7 Q&amp;A</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-1-%E5%AF%B9%E4%BA%8E%E6%B2%A1%E6%9C%89%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E7%B1%BB%EF%BC%8C%E6%98%AF%E5%90%A6%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E5%9F%BA%E7%B1%BB%E6%8C%87%E9%92%88%E7%AE%A1%E7%90%86%E6%B4%BE%E7%94%9F%E7%B1%BB%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="nav-number">6.7.1.</span> <span class="nav-text">4.7.1 对于没有虚函数的类，是否能够使用基类指针管理派生类对象？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-2-%E5%A6%82%E6%9E%9C%E6%B4%BE%E7%94%9F%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%BA%86%E5%85%B7%E6%9C%89%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%9F%BA%E7%B1%BB%EF%BC%8C%E5%8F%88%E5%A2%9E%E5%8A%A0%E4%BA%86%E6%88%90%E5%91%98%EF%BC%8C%E8%BF%98%E8%83%BD%E7%94%A8%E5%9F%BA%E7%B1%BB%E6%8C%87%E9%92%88%E7%AE%A1%E7%90%86%E6%B4%BE%E7%94%9F%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%90%97"><span class="nav-number">6.7.2.</span> <span class="nav-text">4.7.2 如果派生类继承了具有虚函数的基类，又增加了成员，还能用基类指针管理派生类对象吗?</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
