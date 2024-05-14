@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"xiaoniu999.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本文讲解如何使用hexo和GitHub搭建个人博客。 主要架构 在GitHub个人主页创建仓库，仓库名称为username.github.io，这个仓库是博客显示内容的仓库; 在本地电脑创建博客文件夹blog，该文件夹配置后能够使用hexo deploy命令自动部署博客; 创建一个管理博客的远程仓库，将blog文件夹提交到该仓库，实现使用git管理博客内容.  创建博客仓库 与普通仓库创建方式相同">
+  <meta name="description" content="206. 反转链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用github部署博客步骤">
-<meta property="og:url" content="https://xiaoniu999.github.io/%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="LeetCode_Hot100_反转链表_1">
+<meta property="og:url" content="https://xiaoniu999.github.io/LeetCode/LeetCode_Hot100_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8_1/index.html">
 <meta property="og:site_name" content="CSJ的个人博客">
-<meta property="og:description" content="本文讲解如何使用hexo和GitHub搭建个人博客。 主要架构 在GitHub个人主页创建仓库，仓库名称为username.github.io，这个仓库是博客显示内容的仓库; 在本地电脑创建博客文件夹blog，该文件夹配置后能够使用hexo deploy命令自动部署博客; 创建一个管理博客的远程仓库，将blog文件夹提交到该仓库，实现使用git管理博客内容.  创建博客仓库 与普通仓库创建方式相同">
+<meta property="og:description" content="206. 反转链表">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-23T14:19:28.119Z">
-<meta property="article:modified_time" content="2024-05-13T14:04:59.305Z">
+<meta property="article:published_time" content="2024-05-14T12:52:38.986Z">
+<meta property="article:modified_time" content="2024-05-14T13:01:33.585Z">
 <meta property="article:author" content="CSJ">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="网站">
+<meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xiaoniu999.github.io/%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+<link rel="canonical" href="https://xiaoniu999.github.io/LeetCode/LeetCode_Hot100_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8_1/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>使用github部署博客步骤 | CSJ的个人博客</title>
+  <title>LeetCode_Hot100_反转链表_1 | CSJ的个人博客</title>
   
 
 
@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xiaoniu999.github.io/%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="https://xiaoniu999.github.io/LeetCode/LeetCode_Hot100_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/giphy.gif">
@@ -180,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          使用github部署博客步骤
+          LeetCode_Hot100_反转链表_1
         </h1>
 
         <div class="post-meta">
@@ -189,23 +189,17 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2024-04-23 22:19:28" itemprop="dateCreated datePublished" datetime="2024-04-23T22:19:28+08:00">2024-04-23</time>
+              <time title="创建时间：2024-05-14 20:52:38 / 修改时间：21:01:33" itemprop="dateCreated datePublished" datetime="2024-05-14T20:52:38+08:00">2024-05-14</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-13 22:04:59" itemprop="dateModified" datetime="2024-05-13T22:04:59+08:00">2024-05-13</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">教程类</span></a>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
                 </span>
             </span>
 
@@ -220,36 +214,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文讲解如何使用hexo和GitHub搭建个人博客。</p>
-<h2 id="主要架构"><a href="#主要架构" class="headerlink" title="主要架构"></a>主要架构</h2><ol>
-<li>在GitHub个人主页创建仓库，仓库名称为username.github.io，这个仓库是博客显示内容的仓库;</li>
-<li>在本地电脑创建博客文件夹blog，该文件夹配置后能够使用hexo deploy命令自动部署博客;</li>
-<li>创建一个管理博客的远程仓库，将blog文件夹提交到该仓库，实现使用git管理博客内容.</li>
-</ol>
-<h2 id="创建博客仓库"><a href="#创建博客仓库" class="headerlink" title="创建博客仓库"></a>创建博客仓库</h2><ol>
-<li>与普通仓库创建方式相同</li>
-</ol>
-<h2 id="创建本地博客目录"><a href="#创建本地博客目录" class="headerlink" title="创建本地博客目录"></a>创建本地博客目录</h2><ol>
-<li>新建文件夹blog;</li>
-<li>进入blog文件夹，在命令行中使用命令hexo init初始化文件夹；</li>
-<li>继续运行命令npm install更新包；</li>
-<li>运行命令npm install hexo-deployer-git –save，安装git部署插件；</li>
-<li>打开_config.yml文件，修改内容，username为用户名，具体如下：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+        <h2 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></h2><span id="more"></span>
 
-<h2 id="创建管理博客的仓库"><a href="#创建管理博客的仓库" class="headerlink" title="创建管理博客的仓库"></a>创建管理博客的仓库</h2><ol>
-<li>创建远程仓库blog_manage;</li>
-<li>在文件夹blog下，依次运行以下命令：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m “first commit”</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/username/blog_manage.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<h3 id="错误解法"><a href="#错误解法" class="headerlink" title="错误解法"></a>错误解法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            ListNode* curNode = head;</span><br><span class="line">            curNode -&gt; next = <span class="literal">nullptr</span>; <span class="comment">// curNode只是别名，这样会修改原始指针</span></span><br><span class="line">            ListNode* preNode = curNode;</span><br><span class="line">        </span><br><span class="line">            <span class="keyword">while</span>(head -&gt; next != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">                head = head -&gt; next;</span><br><span class="line">                curNode = head;</span><br><span class="line">                curNode -&gt; next = preNode;</span><br><span class="line">                preNode = curNode;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> curNode;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h2><ol>
-<li>hexo generate:每次更新完需要重新生成网页内容；</li>
-<li>hexo server:本地查看网页效果；</li>
-<li>hexo deploy:部署到github网站；</li>
-<li>hexo clean:清除缓存；</li>
-</ol>
+<h3 id="正确答案"><a href="#正确答案" class="headerlink" title="正确答案"></a>正确答案</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            ListNode* curNode = head;</span><br><span class="line">            ListNode* preNode = <span class="literal">nullptr</span>;</span><br><span class="line">        </span><br><span class="line">            <span class="keyword">while</span>(curNode != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">                ListNode* nextNode = curNode -&gt; next;</span><br><span class="line">                curNode -&gt; next = preNode;</span><br><span class="line">                preNode = curNode;</span><br><span class="line">                curNode = nextNode;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> preNode;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p><strong>1. 设置三个指针，分别指向当前节点、前一个节点和后一个节点。</strong></p>
+<p><strong>2. 每次将当前节点的next指针指向前一个节点，然后前一个节点和当前节点后移。</strong></p>
+<p><strong>3. 最后返回前一个节点，即反转后的链表头节点。</strong></p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<li>时间复杂度：O(n)，其中 n 是链表的长度。需要遍历链表一次。</li>
+<li>空间复杂度：O(1)，只使用了常数个变量。</li>
+</ul>
 
     </div>
 
@@ -259,8 +237,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/%E7%BD%91%E7%AB%99/" rel="tag"># 网站</a>
+              <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+              <a href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag"># 链表</a>
           </div>
 
         
@@ -268,10 +246,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/C/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E7%B1%BB_1/" rel="next" title="C++学习笔记_类_1">
-      C++学习笔记_类_1 <i class="fa fa-chevron-right"></i>
+    <a href="/C/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" rel="prev" title="C++基础知识点——持续更新">
+      <i class="fa fa-chevron-left"></i> C++基础知识点——持续更新
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95_%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="next" title="数据结构与算法之二叉树">
+      数据结构与算法之二叉树 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -331,7 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">主要架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">创建博客仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">创建本地博客目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%BB%93%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">创建管理博客的仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">hexo命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">206. 反转链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">错误解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E7%A1%AE%E7%AD%94%E6%A1%88"><span class="nav-number">1.3.</span> <span class="nav-text">正确答案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-number">1.4.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">1.5.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
